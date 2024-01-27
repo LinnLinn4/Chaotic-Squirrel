@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -26,7 +28,7 @@ public class Player : MonoBehaviour
 
 
     [SerializeField]
-    public GameObject scoreText;
+    public TMP_Text scoreText;
 
     [SerializeField]
     private GameObject shield;
@@ -83,7 +85,8 @@ public class Player : MonoBehaviour
             transform.position = new Vector2(Mathf.Clamp(xPos, originXPos, 9999f), transform.position.y);
         }
 
-        scoreText.GetComponent<Text>().text = ((int)score).ToString();
+        scoreText.SetText(((int)score).ToString());
+        //scoreText.GetComponent<Text>().text = ((int)score).ToString();
         boost += Time.deltaTime * 5;
         if (isStunned)
         {
@@ -215,5 +218,15 @@ public class Player : MonoBehaviour
     public void SetStunnedAnimator(bool _isStunnedAnimator)
     {
         anim.SetBool("Stun", _isStunnedAnimator);
+    }
+
+    public void HomeButton()
+    {
+        SceneManager.LoadScene("StartScene");
+    }
+
+    public void RestartButtonButton()
+    {
+        SceneManager.LoadScene("GamePlayScene");
     }
 }
