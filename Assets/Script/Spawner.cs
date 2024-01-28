@@ -17,7 +17,7 @@ public class Spawner : MonoBehaviour
     {
         if (isSpawn)
         {
-            float randomTime = Random.RandomRange(1.5f, 5f);
+            float randomTime = Random.RandomRange(1.5f, 4f);
             StartCoroutine(spawn(randomTime));
         }
 
@@ -43,7 +43,7 @@ public class Spawner : MonoBehaviour
         Instantiate(prefabs[rand], transform);
         if (isSpawn)
         {
-            float randomTime = Random.RandomRange(1f, 5f);
+            float randomTime = Random.RandomRange(1f, 2f);
             StartCoroutine(spawn(randomTime));
         }
     }

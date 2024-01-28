@@ -17,13 +17,13 @@ public class showDebuff : MonoBehaviour
     {
         if (Player.instance.reverseKeys)
         {
-            //transform.GetComponent<SpriteRenderer>().DOColor(new Color(0, 0, 0, 255), 1);
-            transform.GetComponent<Image>().DOColor(new Color(0, 0, 0, 255), 1);
+            transform.GetComponent<SpriteRenderer>().DOColor(new Color(255, 255, 255, 255), 1);
+            //transform.GetComponent<Image>().DOColor(new Color(255, 255, 255, 255), 1);
         }
         else
         {
-            //transform.GetComponent<SpriteRenderer>().DOColor(new Color(0, 0, 0, 0), 1);
-            transform.GetComponent<Image>().DOColor(new Color(0, 0, 0, 0), 1);
+            transform.GetComponent<SpriteRenderer>().DOColor(new Color(0, 0, 0, 0), 1);
+            //transform.GetComponent<Image>().DOColor(new Color(0, 0, 0, 0), 1);
         }
     }
 }

@@ -21,7 +21,7 @@ public class FogEffect : MonoBehaviour
     }
     public void SetFogEffect()
     {
-        transform.GetComponent<SpriteRenderer>().DOColor(Color.gray, 1);
+        transform.GetComponent<SpriteRenderer>().DOColor(new Color(255, 255, 255, 10), 1);
         StartCoroutine(SetOriginal());
     }
 
